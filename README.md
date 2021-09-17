@@ -1,4 +1,4 @@
-# Reprocessing in optically thick outflows can produce the optical emission line spectra of tidal disruption events
+# The Spectral Signatures of Super-Eddington Tidal Disruption Events
 
 Provided are the parameter files, model grids, the synthetic spectra and
 physical parameters of the wind, for the models shown in the paper.

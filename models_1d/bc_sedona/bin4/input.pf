@@ -1,0 +1,54 @@
+System_type(star,cv,bh,agn,previous)                  agn
+
+### Parameters for the Central Object
+Central_object.mass(msol)                      5e6
+Central_object.radius(cm)                    7.352856e+12
+
+### Parameters for the Disk (if there is one)
+Disk.type(none,flat,vertically.extended)                 none
+
+### Parameters for Boundary Layer or the compact object in an X-ray Binary or AGN
+Central_object.radiation(yes,no)                  yes
+Central_object.rad_type_to_make_wind(bb,models,power,cloudy,brems)                   bb
+Central_object.blackbody_temp(K)                    1e6
+Central_object.geometry_for_source(sphere,lamp_post)               sphere
+
+### Parameters describing the various winds or coronae in the system
+Wind.number_of_components                         1
+Wind.type(SV,star,hydro,corona,kwd,homologous,shell,imported)             imported
+Wind.coord_system(spherical,cylindrical,polar,cyl_var)            spherical
+Wind.model2import                 NR.Dai.Bin4.txt
+
+### Parameters associated with photon number, cycles, ionization and radiative transfer options
+Photons_per_cycle                    1e6
+Ionization_cycles                    40
+Spectrum_cycles                    10
+Wind.ionization(on.the.spot,ML93,LTE_tr,LTE_te,fixed,matrix_bb,matrix_pow)                    matrix_pow
+Line_transfer(pure_abs,pure_scat,sing_scat,escape_prob,thermal_trapping,macro_atoms,macro_atoms_thermal_trapping)     macro_atoms_thermal_trapping
+Atomic_data                     data/h10_hetop_standard80.dat
+Surface.reflection.or.absorption(reflect,absorb,thermalized.rerad)               absorb
+Wind_heating.extra_processes(none,adiabatic,nonthermal,both)            adiabatic
+
+### Parameters for Domain 0
+Wind.filling_factor(1=smooth,<1=clumped)                    1
+
+### Parameters defining the spectra seen by observers
+
+Central_object.rad_type_in_final_spectrum(bb,models,power,cloudy,brems)                   bb
+
+### The minimum and maximum wavelengths in the final spectra
+Spectrum.nwave                                 50000
+Spectrum.wavemin(Angstroms)                    10
+Spectrum.wavemax(Angstroms)                    100000
+
+### The observers and their location relative to the system
+Spectrum.no_observers                            1
+Spectrum.angle(0=pole)                          45
+Spectrum.live_or_die(live.or.die,extract)                    extract
+Spectrum.type(flambda,fnu,basic)                    basic
+
+### Parameters for Reverberation Modeling (if needed)
+Reverb.type(none,photon,wind,matom)                 none
+
+### Other parameters
+Photon_sampling.approach(T_star,cv,yso,AGN,tde_bb,min_max_freq,user_bands,cloudy_test,wide,logarithmic)                  tde_bb

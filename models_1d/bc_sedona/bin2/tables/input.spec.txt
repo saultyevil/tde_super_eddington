@@ -1,0 +1,1 @@
+        r      rcen    i inwind converge     nband      nxtot        xj xave_freq  xsd_freq      fmin      fmax  fmin_mod  fmax_mod spec_mod_  pl_alpha  pl_log_w  exp_temp     exp_w 
